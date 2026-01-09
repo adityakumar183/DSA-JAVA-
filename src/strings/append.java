@@ -14,7 +14,7 @@ public class append {
         sb.append("kumar");
         System.out.println(sb);
 
-        char[] ch = {'a','d','i'};
+        char[] ch = {'a', 'd', 'i'};
         sb.append(ch);
         System.out.println(sb);
 
@@ -26,6 +26,6 @@ public class append {
         sb.append(t);
         System.out.println(sb);
 
-      //  sb += " qwe";  // not possible in stringbuilder
+        //  sb += " qwe";  // not possible in stringbuilder
     }
 }

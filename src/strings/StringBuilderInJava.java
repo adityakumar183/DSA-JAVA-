@@ -3,7 +3,7 @@ package strings;
 public class StringBuilderInJava {
     public static void main(String[] args) {
         String s = "Aditya";
-        StringBuilder sb =new StringBuilder(s);
+        StringBuilder sb = new StringBuilder(s);
         System.out.println(sb.length());
         System.out.println(sb.capacity());
 
@@ -13,6 +13,5 @@ public class StringBuilderInJava {
 
         StringBuilder a = new StringBuilder(10);
         System.out.println(a.capacity());
-
     }
 }
