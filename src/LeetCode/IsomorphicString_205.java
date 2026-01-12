@@ -1,32 +1,42 @@
 package LeetCode;
-import java.util.*;
+
 public class IsomorphicString_205 {
     public static boolean isIsomorphic(String s, String t) {
         if (s.length() != t.length()) return false;
 
-        Map<Character, Character> map = new HashMap<>();
-        Set<Character> mapped = new HashSet<>();
+        char[] a = new char[128];
+        char[] b = new char[128];
 
         for (int i = 0; i < s.length(); i++) {
-            char c1 = s.charAt(i);
-            char c2 = t.charAt(i);
+            char ch = s.charAt(i);
+            char dh = t.charAt(i);
 
-            if (map.containsKey(c1)) {
-                if (map.get(c1) != c2) return false;
+            if (a[ch] == '\0' && b[dh] == '\0') {
+                // create new mapping
+                a[ch] = dh;
+                b[dh] = ch;
             } else {
-                if (mapped.contains(c2)) return false;
-                map.put(c1, c2);
-                mapped.add(c2);
+                // check consistency
+                if (a[ch] != dh || b[dh] != ch) {
+                    return false;
+                }
             }
         }
         return true;
     }
 
     public static void main(String[] args) {
-        String s1 = "egg";
-        String s2 = "add";
-        System.out.println(isIsomorphic(s1, s2)); // Output: true
+        String s = "egg";
+        String t = "add";
+
+        if (isIsomorphic(s, t)) {
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
     }
 }
+
+
 
 
