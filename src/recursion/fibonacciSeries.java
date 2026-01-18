@@ -15,11 +15,11 @@ public class fibonacciSeries {
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.print("emter n :");
+        System.out.print("enter n :");
         int n=sc.nextInt();
 
         System.out.println("fibonacci number is : ");
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i <= n; i++) {
             System.out.print(fibonacci(i)+" ");
         }
     }
