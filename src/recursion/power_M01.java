@@ -2,7 +2,7 @@ package recursion;
 
 import java.util.Scanner;
 
-public class power {
+public class power_M01 {
     public static int power(int p , int q){
         // base case:-
         if(q==0) return 1;
