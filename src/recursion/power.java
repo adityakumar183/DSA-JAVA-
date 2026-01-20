@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class power {
     public static int power(int p , int q){
         // base case:-
-        if(q==0){
-            return 1;
-        }
+        if(q==0) return 1;
+        // recursive work :- find p^(q-1)
+        // self work :- multiply with p
         return p * power(p ,q-1);
     }
     public static void main(String[] args) {
