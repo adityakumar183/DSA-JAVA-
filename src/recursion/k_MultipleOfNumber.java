@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class k_MultipleOfNumber {
     public static void multiple(int n , int k){
-        if(k==1){
+        if(k==1){                  // if( k == 0 )  return ;
             System.out.println(n);
             return;
         }
