@@ -6,7 +6,7 @@ public class printArray {
         if(idx == arr.length) return;
 
         // self work:-
-        System.out.println(arr[idx]);
+        System.out.print(arr[idx] +" ");
 
         // recursive work:-
         printarr(arr, idx+1);
@@ -15,6 +15,6 @@ public class printArray {
     public static void main(String[] args) {
         int[] arr = {2,3,5,6,7,9,11,24,56};
 
-        printarr(arr,0);
+        printarr(arr, 0);
     }
 }
