@@ -3,7 +3,7 @@ package recursion;
 public class sumOfArrayElement {
     public static int sumofarray(int[] arr,int idx){
         // base case:-
-        if(idx == arr.length-1) return arr[idx];
+        if(idx == arr.length) return 0;
 
         // recursive work:-
         int smallAns= sumofarray(arr,idx+1);
