@@ -1,7 +1,5 @@
 package recursion;
-
 import java.util.Scanner;
-
 public class findValueInArray {
     public static boolean findvalue(int [] arr,int x,int idx){
         // base case:-
