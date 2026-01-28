@@ -1,6 +1,6 @@
 package recursion;
 import java.util.Scanner;
-public class findValueInArray {
+public class findTargetInArray {
     public static boolean findvalue(int [] arr,int x,int idx){
         // base case:-
         if(idx>=arr.length) return false;
