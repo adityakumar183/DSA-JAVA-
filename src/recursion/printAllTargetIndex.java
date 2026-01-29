@@ -1,7 +1,5 @@
 package recursion;
-
 import java.util.Scanner;
-
 public class printAllTargetIndex {
     public static void AllTargetIndex(int [] arr,int x,int idx){
         if(idx==arr.length) return;

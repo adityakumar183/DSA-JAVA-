@@ -1,7 +1,5 @@
 package recursion;
-
 import java.util.Scanner;
-
 public class printTargetIndex {
     public static int findindex(int [] arr , int x , int idx){
         // base case:-

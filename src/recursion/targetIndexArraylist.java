@@ -1,7 +1,6 @@
 package recursion;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 public class targetIndexArraylist {
     public static ArrayList<Integer> allindex(int[] arr,int x,int idx){
         // base case:-
