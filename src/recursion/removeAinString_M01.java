@@ -1,6 +1,6 @@
 package recursion;
 import java.util.Scanner;
-public class removeAinString {
+public class removeAinString_M01 {
     public static String remove(String s, int idx){
         // base case:-
         if(idx == s.length()){
@@ -16,6 +16,7 @@ public class removeAinString {
         }else{
             return smallans;
         }
+
         // another method for self work:-
 //        char currChar = s.charAt(idx);
 //        if(currChar != 'a'){
