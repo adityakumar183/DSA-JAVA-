@@ -1,27 +1,28 @@
 package recursion;
 import java.util.Scanner;
-public class reverseString {
-
+public class palindromeString {
     public static String reverseusingidx(String s , int idx){
+        // base case:-
         if(idx == s.length()){
             return "";
         }
+        // recursive work:-
         String smallans = reverseusingidx(s,idx+1);
+        // self work:-
         return smallans + s.charAt(idx);
     }
-//    public static String reverse(String s){
-//        // base case:-
-//        if(s.length()==0){
-//            return "";
-//        }
-//        // recursive case:-
-//        return reverse(s.substring(1)) + s.charAt(0);
-//    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.print("Enter a string: ");
         String s = sc.nextLine();
-        //      System.out.println(reverse(s));
-        System.out.println(reverseusingidx(s,0));
+
+        String rev =  reverseusingidx(s,0);
+        if(rev.equals(s)){
+            System.out.printf("%s is a palindrome",s);
+        }else{
+            System.out.printf("%s is not a palindrome",s);
+        }
     }
 }
+
+// printf ka use kar ke hum %s v use kar sakte hai.
