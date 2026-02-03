@@ -1,7 +1,5 @@
 package recursion;
-
 import java.util.Scanner;
-
 public class palindrome {
     public static boolean isPalindrome(String s,int l,int r){
         if(l>=r){

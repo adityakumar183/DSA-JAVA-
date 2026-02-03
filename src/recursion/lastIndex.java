@@ -1,7 +1,5 @@
 package recursion;
-
 import java.util.Scanner;
-
 public class lastIndex {
     public static int lastindex(int[] arr,int x,int idx){
         if(idx==arr.length){
