@@ -26,6 +26,7 @@ public class returnSSQ {
         for(String small : smallans){
             System.out.println(small);
         }
+     //   System.out.println(getSSQ(s));
 
     }
 }
