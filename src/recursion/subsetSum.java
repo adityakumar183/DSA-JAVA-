@@ -1,5 +1,4 @@
 package recursion;
-
 public class subsetSum {
     public static void subsetsum(int [] arr,int n,int idx,int currSum){
         if(idx>=n){

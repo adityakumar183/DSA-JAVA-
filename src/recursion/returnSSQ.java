@@ -27,6 +27,5 @@ public class returnSSQ {
             System.out.println(small);
         }
      //   System.out.println(getSSQ(s));
-
     }
 }
