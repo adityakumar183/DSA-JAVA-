@@ -2,7 +2,7 @@ package recursion;
 
 public class one {
         // Recursive function to calculate sum of digits
-        static int sumOfDigits(int n) {
+       public static int sumOfDigits(int n) {
             if (n == 0) {
                 return 0;  // Base case
             }
