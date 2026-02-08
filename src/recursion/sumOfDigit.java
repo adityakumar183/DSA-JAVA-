@@ -15,6 +15,6 @@ public class sumOfDigit {
         System.out.print("enter a number : ");
         int n = sc.nextInt();
 
-        System.out.println("sum of digit is : " + digitsum(n));
+        System.out.println("sum of digit of " + n + " is: " + digitsum(n));
     }
 }
