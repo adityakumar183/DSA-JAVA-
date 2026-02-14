@@ -1,8 +1,7 @@
 package Sorting;
 
 public class selectionSort {
-    // Function to perform Selection Sort
-       public static void selectionSort(int arr[]) {
+       public static void selectionSort(int[] arr) {
             int n = arr.length;
 
             for (int i = 0; i < n - 1; i++) {
@@ -23,25 +22,21 @@ public class selectionSort {
             }
         }
 
-        // Function to print the array
-        static void printArray(int arr[]) {
-            for (int num : arr) {
-                System.out.print(num + " ");
-            }
-            System.out.println();
-        }
-
-        // Main method
         public static void main(String[] args) {
-            int arr[] = {64, 25, 12, 22, 11};
+            int[] arr = {64, 25, 12, 22, 11};
 
             System.out.println("Original Array:");
-            printArray(arr);
+            for(int i : arr){
+                System.out.print(i+" ");
+            }
+            System.out.println();
 
             selectionSort(arr);
 
             System.out.println("Sorted Array:");
-            printArray(arr);
+            for(int j : arr){
+                System.out.print(j+" ");
+            }
         }
     }
 
