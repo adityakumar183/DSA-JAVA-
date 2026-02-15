@@ -16,9 +16,11 @@ public class selectionSort {
                 }
 
                 // Swap the found minimum element with the first element
-                int temp = arr[i];
-                arr[i] = arr[minIndex];
-                arr[minIndex] = temp;
+                if(minIndex != i) {
+                    int temp = arr[i];
+                    arr[i] = arr[minIndex];
+                    arr[minIndex] = temp;
+                }
             }
         }
 
