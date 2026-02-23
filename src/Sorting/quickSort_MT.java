@@ -1,7 +1,14 @@
 package Sorting;
+import java.util.Random;
 
 public class quickSort_MT {
     public static int partition(int[] arr, int st, int end){
+        Random rd = new Random();
+        // pick random index between st and end
+        int randomIdx = rd.nextInt(end - st + 1) + st;
+        // swap random pivot with start
+        swap(arr, st, randomIdx);
+
         int pivot = arr[st];
         int count = 0;
         for(int i = st+1; i <= end; i++){
