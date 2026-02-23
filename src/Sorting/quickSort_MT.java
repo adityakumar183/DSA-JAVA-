@@ -3,6 +3,7 @@ import java.util.Random;
 
 public class quickSort_MT {
     public static int partition(int[] arr, int st, int end){
+        // Random pivot
         Random rd = new Random();
         // pick random index between st and end
         int randomIdx = rd.nextInt(end - st + 1) + st;
