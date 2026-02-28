@@ -1,9 +1,9 @@
 package Sorting;
 
-public class countSort {
+public class basicCountSort {
     public static void countsort(int [] arr, int n){
         // Find the maximum value in arr
-        int max = arr[0];
+        int max = Integer.MIN_VALUE;
         for (int i = 1; i < n; i++) {
             if (arr[i] > max) {
                 max = arr[i];
@@ -19,11 +19,10 @@ public class countSort {
         }
 
         // Build the sorted array
-        int index = 0;
-        for (int i = 0; i <= max; i++) {
-            while (count[i] > 0) {
-                arr[index++] = i;
-                count[i]--;
+        int index = 0;                 // for iterating in the array
+        for (int i = 0; i < count.length; i++) {
+           for (int j = 0; j < count[i]; j++) {
+               arr[index++] = i;
             }
         }
     }
