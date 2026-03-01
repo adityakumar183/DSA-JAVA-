@@ -1,6 +1,6 @@
 package Sorting;
 
-public class basicCountSort {
+public class countSort_M01 {
     public static void countsort(int [] arr, int n){
         // Find the maximum value in arr
         int max = Integer.MIN_VALUE;
