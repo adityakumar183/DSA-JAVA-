@@ -45,16 +45,14 @@ public class heapSort {
             }
         }
 
-        // Utility function to print array
         static void printArray(int arr[]) {
             for (int value : arr)
                 System.out.print(value + " ");
             System.out.println();
         }
 
-        // Driver code
         public static void main(String args[]) {
-            int arr[] = {12, 11, 13, 5, 6, 7};
+            int[] arr = {12, 11, 13, 5, 6, 7};
             System.out.println("Original array:");
             printArray(arr);
 

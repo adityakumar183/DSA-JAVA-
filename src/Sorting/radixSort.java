@@ -47,7 +47,7 @@ public class radixSort {
 
         // Driver code
         public static void main(String[] args) {
-            int arr[] = {170, 45, 75, 90, 802, 24, 2, 66};
+            int[] arr ={170, 45, 75, 90, 802, 24, 2, 66};
 
             System.out.println("Original Array: " + Arrays.toString(arr));
             radixSort(arr);
