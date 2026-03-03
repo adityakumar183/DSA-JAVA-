@@ -1,54 +1,52 @@
 package Sorting;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class bucketSort {
-    public static void bucketsort(int[] arr,int bucketSize){
-        if (arr.length == 0) return;
-
-        // Find min and max
-        int min = arr[0], max = arr[0];
-        for (int num : arr) {
-            if (num < min) min = num;
-            if (num > max) max = num;
+    public static void bucketsort(float[] arr) {
+        int n = arr.length;
+        // buckets
+        ArrayList<Float>[] buckets = new ArrayList[n];
+        // creat empty buckets
+        for(int i = 0; i < n; i++){
+            buckets[i] = new ArrayList<Float>();
         }
 
-        // Number of buckets
-        int bucketCount = (max - min) / bucketSize + 1;
-        List<List<Integer>> buckets = new ArrayList<>(bucketCount);
-
-        // Initialize buckets
-        for (int i = 0; i < bucketCount; i++) {
-            buckets.add(new ArrayList<>());
+        // add elements into our buckets
+        for(int i = 0; i < n; i++){
+            int bucketindex = (int)arr[i] * n;
+            buckets[bucketindex].add(arr[i]);
         }
 
-        // Distribute elements into buckets
-        for (int num : arr) {
-            buckets.get((num - min) / bucketSize).add(num);
+        // sort each bucket individually
+        for(int i = 0; i < buckets.length; i++){
+            Collections.sort(buckets[i]);
         }
 
-        // Sort each bucket and merge
+        // merge all buckets to get final sorted array
         int index = 0;
-        for (List<Integer> bucket : buckets) {
-            Collections.sort(bucket); // simple sort inside bucket
-            for (int num : bucket) {
-                arr[index++] = num;
+        for(int i = 0; i < buckets.length; i++){
+            ArrayList<Float> currBucket = buckets[i];
+            for(int j = 0; j < currBucket.size(); j++){
+                arr[index++] = currBucket.get(j);
             }
         }
     }
 
-    public static void display(int[] arr) {
-        for(int val : arr) {
+    public static void display(float[] arr) {
+        for(float val : arr) {
             System.out.print(val + " ");
         }
         System.out.println();
     }
 
     public static void main(String[] args) {
-        int [] arr = {24,76,34,7,3,8,2,99,45};
-        int n = arr.length;
+        float[] arr = {0.3f, 0.5f, 0.9f, 0.4f, 0.7f};
         System.out.println("array before sorting: ");
         display(arr);
 
-        bucketsort(arr,5);
+        bucketsort(arr);
 
         System.out.println("Array after sorting: ");
         display(arr);
