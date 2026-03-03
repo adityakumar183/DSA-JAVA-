@@ -41,6 +41,7 @@ public class mergeSort {
            for(int val : arr){
                System.out.print(val+" ");
             }
+             System.out.println();
         }
 
         public static void main(String[] args) {
@@ -48,7 +49,6 @@ public class mergeSort {
             int n = arr.length;
             System.out.println("Original Array:");
             display(arr);
-            System.out.println();
 
             mergeSort(arr, 0, n-1);
 
