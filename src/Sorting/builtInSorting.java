@@ -2,6 +2,13 @@ package Sorting;
 import java.util.Arrays;
 import java.util.Scanner;
 public class builtInSorting {
+    public static void display(int[] arr){
+        for(int val : arr){
+            System.out.print(val+" ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -13,13 +20,13 @@ public class builtInSorting {
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+        System.out.println("unsorted input array: ");
+        display(arr);
 
         Arrays.sort(arr); // built-in sorting
 
         System.out.println("Sorted output:");
-        for (int num : arr) {
-            System.out.print(num + " ");
-        }
+        display(arr);
     }
 }
 
