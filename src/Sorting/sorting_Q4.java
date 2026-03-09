@@ -1,7 +1,7 @@
 package Sorting;
-/*A college stores the roll numbers of students in random order.
-The administration wants to arrange these roll numbers in ascending order so that searching and record management becomes easier.
-
+/*     A college stores the roll numbers of students in random order.
+       The administration wants to arrange these roll numbers in ascending
+       order so that searching and record management becomes easier.
  */
 public class sorting_Q4 {
         public static void main(String args[]) {
