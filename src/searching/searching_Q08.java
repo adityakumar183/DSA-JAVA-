@@ -2,13 +2,17 @@ package searching;
 /*
        A peak element is an element that is strictly greater than its neighbors.
 
-       Given a 0-indexed integer array nums, find a peak element, and return its index. If
+       Given a 0-indexed integer array arr, find a peak element, and return its index. If
        the array contains multiple peaks, return the index to any of the peaks.
 
-       You may imagine that nums[-1] = nums[n] = -m. In other words, an element is
+       You may imagine that arr[-1] = arr[n] = -m. In other words, an element is
        always considered to be strictly greater than a neighbor that is outside the array.
 
-       Youjmust write an algorithm that runs in 0(log n) time.
+       You must write an algorithm that runs in 0(log n) time.
+
+       Input: arr = [1,2,3,1]
+       Output: 2
+       Explanation: 3 is a peak element and your function should return the index number 2.
  */
 public class searching_Q08 {
     public static int findPeakElement(int[] arr) {
