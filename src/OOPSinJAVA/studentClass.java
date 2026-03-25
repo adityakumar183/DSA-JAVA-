@@ -2,11 +2,11 @@ package OOPSinJAVA;
 
 public class studentClass {
     // crating a new data type
-    public static class Student{
-        String name;
-        int roll_no;
-        double percent;
-    }
+//    public static class Student{
+//        String name;
+//        int roll_no;
+//        double percent;
+//    }
 
     public static void main(String[] args) {
 
