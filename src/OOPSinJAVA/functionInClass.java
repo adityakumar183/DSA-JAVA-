@@ -17,5 +17,7 @@ public class functionInClass {
 
         change(s1);
         System.out.println(s1.name);
+        s1.setAge(22);
+        System.out.println(s1.getAge());
     }
 }
