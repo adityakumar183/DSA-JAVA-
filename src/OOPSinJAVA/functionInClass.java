@@ -14,6 +14,8 @@ public class functionInClass {
         s1.roll_no = 12;
         s1.percent = 8.24;
         System.out.println(s1.name);
+        // s1.collegeName = "LNCT";     // cannot assign a value to final variable collegeName
+        System.out.println(s1.collegeName);
 
         change(s1);
         System.out.println(s1.name);

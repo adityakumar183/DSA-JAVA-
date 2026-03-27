@@ -7,9 +7,12 @@ public class Student {
     double percent;
     private int age;
     public String none;
+    static int numberofstudents;
+    final String collegeName = "IES college";   // cannot CHANGE a value to final variable collegeName
 
     // default constructor
     public Student() {
+
     }
 
     // parametrized constructor
@@ -17,23 +20,35 @@ public class Student {
         name = naam;
         roll_no = roll;
         percent = perc;
+        numberofstudents++;
     }
 
     // getter function
-    public int getAge(){     // getter function
+    public int getAge(){
         return age;
     }
 
     // setter function
-//    public void setAge(int Age){
-//        age = Age;
-//    }
-
-    // setter function
-    public void setAge(int age){       // setter function using "this" keyword
+    public void setAge(int age){
         this.age = age;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
