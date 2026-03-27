@@ -8,14 +8,17 @@ public class Student {
     private int age;
     public String none;
 
-
+    // getter function
     public int getAge(){     // getter function
         return age;
     }
-//    public void setAge(int Age){       // setter function
+
+    // setter function
+//    public void setAge(int Age){
 //        age = Age;
 //    }
 
+    // setter function
     public void setAge(int age){       // setter function using "this" keyword
         this.age = age;
     }
