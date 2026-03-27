@@ -8,6 +8,17 @@ public class Student {
     private int age;
     public String none;
 
+    // default constructor
+    public Student() {
+    }
+
+    // parametrized constructor
+    public Student(String naam, int roll, double perc) {
+        name = naam;
+        roll_no = roll;
+        percent = perc;
+    }
+
     // getter function
     public int getAge(){     // getter function
         return age;
