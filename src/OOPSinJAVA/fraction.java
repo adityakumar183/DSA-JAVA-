@@ -8,7 +8,7 @@ public class fraction {
         return f3;
     }
 
-    public static Fraction substract(Fraction f1, Fraction f2) {
+    public static Fraction subtract(Fraction f1, Fraction f2) {
         int numerator = f1.num*f2.den - f1.den*f2.num;
         int denominator = f1.den * f2.den;
         Fraction f4 = new Fraction(numerator, denominator);
@@ -66,7 +66,7 @@ public class fraction {
         Fraction f3 = add(f1, f2);
         System.out.println("Addition : " + f3.num+"/"+f3.den);
 
-        Fraction f4 = substract(f1, f2);
+        Fraction f4 = subtract(f1, f2);
         System.out.println("Substraction : " + f4.num+"/"+f4.den);
 
         Fraction f5 = multiply(f1,f2);
