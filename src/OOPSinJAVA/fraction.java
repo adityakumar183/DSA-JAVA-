@@ -8,6 +8,27 @@ public class fraction {
         return f3;
     }
 
+    public static Fraction substract(Fraction f1, Fraction f2) {
+        int numerator = f1.num*f2.den - f1.den*f2.num;
+        int denominator = f1.den * f2.den;
+        Fraction f4 = new Fraction(numerator, denominator);
+        return f4;
+    }
+
+    public static Fraction multiply(Fraction f1, Fraction f2) {
+        int numerator = f1.num * f2.num;
+        int denominator = f1.den * f2.den;
+        Fraction f5 = new Fraction(numerator, denominator);
+        return f5;
+    }
+
+    public static Fraction divide(Fraction f1, Fraction f2) {
+        int numerator = f1.num * f2.den;
+        int denominator = f1.den * f2.num;
+        Fraction f6 = new Fraction(numerator, denominator);
+        return f6;
+    }
+
     // function:-
     public static int gcd(int num, int den){
         int min = Math.min(num, den);
@@ -43,6 +64,16 @@ public class fraction {
         System.out.println(f2.num+"/"+f2.den);
 
         Fraction f3 = add(f1, f2);
-        System.out.println(f3.num+"/"+f3.den);
+        System.out.println("Addition : " + f3.num+"/"+f3.den);
+
+        Fraction f4 = substract(f1, f2);
+        System.out.println("Substraction : " + f4.num+"/"+f4.den);
+
+        Fraction f5 = multiply(f1,f2);
+        System.out.println("Multiplication : " + f5.num+"/"+f5.den);
+
+        Fraction f6 = divide(f1, f2);
+        System.out.println("Division : " + f6.num+"/"+f6.den);
+
     }
 }
