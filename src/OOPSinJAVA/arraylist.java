@@ -24,12 +24,12 @@ public class arraylist {
             }
         }
 
-        public int get(int idx) {
+        public void get(int idx) {
             if (idx >= 0 && idx < size) {
-                return arr[idx];
+                System.out.println("value at idx "+ idx + " = " + arr[idx]);
+            }else {
+                System.out.println("Invalid index: " + idx);
             }
-            System.out.println("Invalid index: " + idx);
-            return -1;
         }
     }
 
@@ -42,6 +42,6 @@ public class arraylist {
        arr.add(5);
        System.out.println(arr.size);
        arr.set(0,10);
-       System.out.println(arr.get(6));
+       arr.get(3);
     }
 }
