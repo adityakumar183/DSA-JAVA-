@@ -14,6 +14,16 @@ class SLL{
         size++;
     }
 
+    void insertAtHead(int val){
+        Node temp = new Node(val);
+        if(head == null) head = tail = temp;
+        else{
+            tail.next = temp;
+            tail = temp;
+        }
+        size++;
+    }
+
     void display(){
         Node temp = head;
         while(temp != null){
