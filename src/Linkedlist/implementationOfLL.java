@@ -1,10 +1,10 @@
 package Linkedlist;
 class SLL{
-    Node head;
-    Node tail;
-    int size;
+    private Node head;
+    private Node tail;
+    private int size;
 
-    void insertAtEnd(int val){
+    void insertAtTail(int val){
         Node temp = new Node(val);
         if(head == null) head = tail = temp;
         else{
@@ -18,8 +18,8 @@ class SLL{
         Node temp = new Node(val);
         if(head == null) head = tail = temp;
         else{
-            tail.next = temp;
-            tail = temp;
+            temp.next = head;
+            head = temp;
         }
         size++;
     }
@@ -42,16 +42,18 @@ public class implementationOfLL {
     public static void main(String[] args) {
         SLL list = new SLL();
         list.size();
-        list.insertAtEnd(10);
-        list.insertAtEnd(20);
-        list.insertAtEnd(30);
-        list.insertAtEnd(40);
-        list.insertAtEnd(50);
+        list.insertAtTail(10);
+        list.insertAtTail(20);
+        list.insertAtTail(30);
+        list.insertAtTail(40);
+        list.insertAtTail(50);
         list.display();
-        System.out.println(list.size);
-        list.insertAtEnd(60);
+        list.size();
+        list.insertAtTail(60);
         list.display();
-        System.out.println(list.size);
+        list.size();
+        list.insertAtHead(90);
+        list.display();
         list.size();
     }
 }
