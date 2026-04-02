@@ -25,6 +25,18 @@ class SLL{
     }
 
     void insert(int idx, int val){
+        if(idx == 0){
+            insertAtHead(val);
+            return;
+        }
+        if(idx == size){
+            insertAtTail(val);
+            return;
+        }
+        if(idx > size){
+            System.out.println("Index out of range");
+            return;
+        }
         Node temp = new Node(val);
         Node x = head;
         for(int i=0; i<idx-1; i++){
