@@ -24,6 +24,17 @@ class SLL{
         size++;
     }
 
+    void insert(int idx, int val){
+        Node temp = new Node(val);
+        Node x = head;
+        for(int i=0; i<idx-1; i++){
+            x = x.next;
+        }
+        temp.next = x.next;
+        x.next = temp;
+        size++;
+    }
+
     void display(){
         Node temp = head;
         while(temp != null){
@@ -55,5 +66,20 @@ public class implementationOfLL {
         list.insertAtHead(90);
         list.display();
         list.size();
+        list.insert(1,100);
+        list.display();
+        list.insert(8,70);
+        list.insert(9,80);
+        list.display();
     }
 }
+
+
+/*
+ when we have tail :-
+    time complexity O(1)
+    space complexity O(1)
+
+    if not then,
+    time complexity O(n)
+ */
