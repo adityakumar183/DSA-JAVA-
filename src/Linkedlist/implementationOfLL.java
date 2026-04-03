@@ -33,7 +33,7 @@ class SLL{
             insertAtTail(val);
             return;
         }
-        if(idx > size){
+        if(idx > size || idx < 0){
             System.out.println("Index out of range");
             return;
         }
@@ -45,6 +45,24 @@ class SLL{
         temp.next = x.next;
         x.next = temp;
         size++;
+    }
+
+    int get(int idx){
+        if(idx >= size || idx < 0){
+            System.out.println("Index out of range");
+            return -1;
+        }
+        if(idx == 0){
+            return head.val;
+        }
+        if(idx == size-1){
+            return tail.val;
+        }
+        Node temp = head;
+        for(int i=0; i<idx; i++){
+            temp = temp.next;
+        }
+        return temp.val;
     }
 
     void display(){
@@ -83,6 +101,7 @@ public class implementationOfLL {
         list.insert(8,70);
         list.insert(9,80);
         list.display();
+        System.out.println(list.get(5));
     }
 }
 
