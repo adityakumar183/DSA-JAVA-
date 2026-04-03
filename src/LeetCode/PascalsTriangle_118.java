@@ -2,8 +2,7 @@ package LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 public class PascalsTriangle_118 {
-    public static void main(String[] args) {
-        int n=5;
+    public static List<List<Integer>> generate(int n){
         List<List<Integer>> ans= new ArrayList<>();
         for (int i = 0; i < n; i++) {
             List<Integer> l = new ArrayList<>();
@@ -13,11 +12,16 @@ public class PascalsTriangle_118 {
             }
             ans.add(l);
         }
+        return ans;
+    }
 
-        // print:->
-        for (int i = 0; i < ans.size(); i++) {
-            System.out.println(ans.get(i)+" ");
+    public static void main(String[] args) {
+        int numberofrow = 5;
+        List<List<Integer>> ans = generate(numberofrow);
+
+        // vertical ArrayList style print
+        for (List<Integer> row : ans) {
+            System.out.println(row);
         }
-        System.out.println();
     }
 }
