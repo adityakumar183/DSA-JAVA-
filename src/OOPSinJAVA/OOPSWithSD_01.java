@@ -1,5 +1,4 @@
 package OOPSinJAVA;
-
 class Pen{
     String color;
     String type;
@@ -41,7 +40,7 @@ class Students{
     }
 }
 
-public class OOPSWithSD {
+public class OOPSWithSD_01 {
     public static void main(String[] args) {
         Pen p1 = new Pen();
         p1.color = "red";
