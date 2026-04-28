@@ -1,14 +1,34 @@
 package OOPSinJAVA;
 // Compile-time Polymorphism (Method Overloading)
-class Calculator {
-    int add(int a, int b) {
-        return a + b;
-    }
+class Aditya {
+   String name;
+   int age;
 
-    double add(double a, double b) {
-        return a + b;
-    }
+   public void printInfo(String name){
+       System.out.println(name);
+   }
+
+   public void printInfo(int age){
+       System.out.println(age);
+   }
+
+   public void printInfo(String name,int age){
+       System.out.println(name);
+       System.out.println(age);
+   }
 }
+
+/*
+         class Calculator {
+              int add(int a, int b) {
+                  return a + b;
+              }
+
+              double add(double a, double b) {
+                   return a + b;
+               }
+         }
+ */
 
 // Runtime Polymorphism (Method Overriding)
 class Animal {
@@ -34,9 +54,13 @@ class Cat extends Animal {
 public class OOPSWithSD_02 {
     public static void main(String[] args) {
         // Method Overloading
-        Calculator calc = new Calculator();
-        System.out.println("Sum of ints: " + calc.add(5, 10));
-        System.out.println("Sum of doubles: " + calc.add(3.5, 2.5));
+        Aditya ad = new Aditya();
+        ad.name = "Aman";
+        ad.age = 23;
+
+        ad.printInfo(ad.name);
+        ad.printInfo(ad.age);
+        ad.printInfo(ad.name,ad.age);
 
         // Method Overriding
         Animal a1 = new Dog();  // reference of Animal, object of Dog

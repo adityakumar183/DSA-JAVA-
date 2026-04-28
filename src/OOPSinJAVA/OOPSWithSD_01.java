@@ -68,3 +68,8 @@ public class OOPSWithSD_01 {
         s3.printInfo();
     }
 }
+
+
+
+// java me hum destructor use nhi karte hai because isme garbage collector hota hai
+// jo khud se he sari garbage value ko remove kar deta hai
