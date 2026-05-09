@@ -30,7 +30,7 @@ public class middleOfTheLinkedList_876 {
         // Method 02:- One Pass Solution / Without Finding The Length / Slow-Fast Approach
         ListNode slow = head;
         ListNode fast = head;
-        while(fast != null && fast.next != null){
+        while(fast != null && fast.next != null){              // null ka next nahi hota hai
             slow = slow.next;
             fast = fast.next.next;
         }
