@@ -1,7 +1,7 @@
 package LeetCode;
 
 public class middleOfTheLinkedList_876 {
-    // two pass solution:-      T.C = O(n)  and  O(1) extra space is used
+    // Method 01:- two pass solution:-      T.C = O(n)  and  O(1) extra space is used
     public static ListNode middleNode(ListNode head) {
         ListNode temp = head;
         int len = 0;
@@ -23,6 +23,20 @@ public class middleOfTheLinkedList_876 {
             head = head.next;
         }
         System.out.println();
+
+
+
+        /*
+        // Method 02:- One Pass Solution / Without Finding The Length / Slow-Fast Approach
+        ListNode slow = head;
+        ListNode fast = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+
+         */
     }
 
     public static void main(String[] args) {
