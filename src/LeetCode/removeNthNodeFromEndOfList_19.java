@@ -2,6 +2,7 @@ package LeetCode;
 
 public class removeNthNodeFromEndOfList_19 {
     public static ListNode removeNthFromEnd(ListNode head, int n) {
+        // Method 01:-
         ListNode slow = head;
         ListNode fast = head;
         // move fast n steps ahead
@@ -20,6 +21,36 @@ public class removeNthNodeFromEndOfList_19 {
         slow.next = slow.next.next;
         return head;
     }
+
+    /*
+    // Method 02:-
+    ListNode temp = head;
+    int len = 0;
+    while(temp !=null)
+
+    {
+        temp = temo.next;
+        len++;
+    }
+    // edge cases
+    if(len == n) return head.next;
+    // n from the end = (len-n+1) from start
+    // we need a temp = len-n
+    temp =head;
+    for(
+    int i = 1;
+    i<=len-n-1;i++)
+
+    {
+        temp = temp.next;
+    }
+
+    temp.next =temp.next.next;
+     return head;
+    }
+
+     */
+
 
     public static void printList(ListNode head) {
         while (head != null) {
