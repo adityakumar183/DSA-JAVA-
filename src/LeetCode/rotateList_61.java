@@ -21,7 +21,7 @@ public class rotateList_61 {
             fast = fast.next;
         }
         ListNode newHead = slow.next;
-        slow.next = null;
+        slow.next = null;    // slow is now the new tail
         fast.next = head;
         return newHead;
     }
