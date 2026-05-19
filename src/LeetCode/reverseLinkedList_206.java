@@ -1,6 +1,8 @@
 package LeetCode;
 
 public class reverseLinkedList_206 {
+    /*
+    // Method 01:-   iterative method
     public static ListNode reverseList(ListNode head) {
         ListNode curr = head;
         ListNode prev = null;
@@ -12,6 +14,18 @@ public class reverseLinkedList_206 {
             curr = Next;
         }
         return prev;
+    }
+
+     */
+
+    // Method 02 :-   recursive method
+    public static ListNode reverseList(ListNode head) {
+        if(head == null || head.next == null) return head;
+        ListNode a = head.next;
+        ListNode newHead = reverseList(a);
+        a.next = head;
+        head.next = null;
+        return newHead;
     }
 
     public static void printList(ListNode head){
