@@ -76,6 +76,56 @@ public class doublyLL {
         r.prev = t;
     }
 
+    public static Node deleteHead(Node head){
+        if(head == null) return null;
+        if(head.next == null) return null;
+
+        Node newHead = head.next;   // move head forward
+        newHead.prev = null;        // disconnect old head
+        head.next = null;
+        return newHead;
+    }
+
+    public static Node deleteTail(Node head){
+        if(head == null) return null;
+        if(head.next == null) return null;
+
+        Node temp = head;
+        // tail tak jao
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        // ab temp tail par hai
+        Node newTail = temp.prev;
+        newTail.next = null;
+        temp.prev = null;
+        return head;
+    }
+
+    public static Node deleteAtIdx(Node head, int idx){
+        if(head == null) return null;
+        if(idx == 0){
+            return deleteHead(head);
+        }
+
+        Node temp = head;
+        for(int i=0; i<idx; i++){
+            temp = temp.next;
+        }
+        // temp ab idx position par hai
+        Node prevNode = temp.prev;
+        Node nextNode = temp.next;
+
+        prevNode.next = nextNode;
+        if(nextNode != null){
+            nextNode.prev = prevNode;
+        }
+
+        temp.prev = null;
+        temp.next = null;
+        return head;
+    }
+
     public static void main(String[] args) {
         // 4 10 2 99 13
         Node a = new Node(4);
@@ -95,16 +145,26 @@ public class doublyLL {
         displayReverse(e);
         displayRandom(c);
 
-        // value insert at head
-        Node newHead = insertAtHead(a,35);
-        display(newHead);
+//        // value insert at head
+//        Node newHead = insertAtHead(a,35);
+//        display(newHead);
+//
+//        // value insert at tail
+//        insertAtTail(a,90);
+//        display(a);
+//
+//        // value insert at idx
+//        insertAtIdx(a,3,56);
+//        display(a);
+//
+//        // delete head (4)
+//        Node afterDelete = deleteHead(a);
+//        display(afterDelete);
 
-        // value insert at tail
-        insertAtTail(a,90);
-        display(a);
+        Node afterDeleteTail = deleteTail(a);
+        display(afterDeleteTail);
 
-        // value insert at idx
-        insertAtIdx(a,3,56);
-        display(a);
+        Node afterDeleteIdx = deleteAtIdx(a,2);
+        display(afterDeleteIdx);
     }
 }
