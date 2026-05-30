@@ -3,6 +3,8 @@ class Node {
     int val;
     Node next;
     Node random;
+    Node child;
+    Node prev;
 
     public Node(int val) {
         this.val = val;
