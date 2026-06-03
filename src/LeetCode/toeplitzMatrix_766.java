@@ -20,3 +20,7 @@ public class toeplitzMatrix_766 {
         System.out.println(isToeplitzMatrix(arr));
     }
 }
+
+
+
+// A matrix is Toeplitz if every diagonal from top-left to bottom-right has the same elements.
