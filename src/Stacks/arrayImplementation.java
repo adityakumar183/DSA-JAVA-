@@ -81,3 +81,13 @@ public class arrayImplementation {
         System.out.println(st.peek());
     }
 }
+
+/*
+     Advantage :-
+        1. Size  -> for every element -> space taken in one block
+            (fixed size array)
+        2. Display -> space complexity O(1)
+
+     Disadvantage :-
+        1. Size -> fixed -> overflow condition
+ */
