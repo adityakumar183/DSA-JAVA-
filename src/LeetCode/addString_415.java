@@ -1,0 +1,33 @@
+package LeetCode;
+
+public class addString_415 {
+    public static String addStrings(String num1, String num2) {
+        StringBuilder sb = new StringBuilder();
+        int i = num1.length() - 1;
+        int j = num2.length() - 1;
+        int carry = 0;
+
+        while (i >= 0 || j >= 0 || carry > 0) {
+            int d1 = 0;
+            if (i >= 0) d1 = num1.charAt(i) - '0';
+
+            int d2 = 0;
+            if (j >= 0) d2 = num2.charAt(j) - '0';
+
+            int sum = d1 + d2 + carry;
+
+            sb.append(sum % 10);
+            carry = sum / 10;
+
+            i--;
+            j--;
+        }
+
+        return sb.reverse().toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(addStrings("11", "22"));    // 33
+        System.out.println(addStrings("51", "65"));   // 116
+    }
+}
