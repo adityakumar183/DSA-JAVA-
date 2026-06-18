@@ -1,6 +1,20 @@
+/*
+     Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+
+     Implement the MinStack class:
+        - MinStack() initializes the stack object.
+        - void push(int value) pushes the element value onto the stack.
+        - void pop() removes the element on the top of the stack.
+        - int top() gets the top element of the stack.
+        - int getMin() retrieves the minimum element in the stack.
+
+    You must implement a solution with O(1) time complexity for each function.
+ */
+
 package LeetCode;
 import java.util.*;
 
+// Method 01:-
 public class minStack_155 {
     private Stack<Integer> st;
     private Stack<Integer> minSt;
@@ -46,16 +60,40 @@ public class minStack_155 {
 }
 
 
-
 /*
-     Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+// Method 02:-
 
-     Implement the MinStack class:
-        - MinStack() initializes the stack object.
-        - void push(int value) pushes the element value onto the stack.
-        - void pop() removes the element on the top of the stack.
-        - int top() gets the top element of the stack.
-        - int getMin() retrieves the minimum element in the stack.
+class MinStack {
+    Stack<Integer> st = new Stack<>();
+    Stack<Integer> min = new Stack<>();
 
-    You must implement a solution with O(1) time complexity for each function.
+    public MinStack() {
+        // constructor
+    }
+
+    public void push(int val) {
+        if(st.size()==0){
+            st.push(val);
+            min.push(val);
+        }
+        else{
+            st.push(val);
+            if(min.peek()<val) min.push(min.peek());
+            else min.push(val);
+        }
+    }
+
+    public void pop() {
+        st.pop();
+        min.pop();
+    }
+
+    public int top() {
+        return st.peek();
+    }
+
+    public int getMin() {
+        return min.peek();
+    }
+}
  */
