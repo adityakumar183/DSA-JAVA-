@@ -97,3 +97,55 @@ class MinStack {
     }
 }
  */
+
+
+/*
+// Method 03:-   T.C = O(1)
+class MinStack {
+    Stack<Long> st = new Stack<>();
+    long min;
+
+    public MinStack() {
+        min = Long.MAX_VALUE;
+    }
+
+    public void push(int val) {
+        long x = (long)val;
+        if(st.size()==0){
+            st.push(x);
+            min = x;
+        }
+        else if(x>=min){
+            st.push(x);
+        }
+        else{    // x<min
+            st.push(2*x-min);
+            min = x;
+        }
+    }
+
+    public void pop() {
+        if(st.size()==0) return;
+        else if(st.peek()>=min){
+            st.pop();
+        }
+        else {        //st.peek()<min
+            long old = 2*min - st.peek();
+            min = old;
+            st.pop();
+        }
+    }
+
+    public int top() {
+        if(st.size()==0) return -1;
+        long top = st.peek();
+        if(top>=min) return (int)top;
+        else return (int)min;
+    }
+
+    public int getMin() {
+        if(st.size()==0) return -1;
+        return (int)min;
+    }
+}
+ */
