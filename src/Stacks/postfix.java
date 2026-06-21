@@ -1,9 +1,10 @@
 package Stacks;
+
 import java.util.Stack;
 
-public class prefix {
+public class postfix {
     public static void main(String[] args) {
-        String infix = "9-(5+3)*4/8";   // Prefix is : -9/*+5348
+        String infix = "9-(5+3)*4/8";   // Postfix is : 953+4*8/-
         System.out.println("Infix is : " + infix);
         Stack<String> val = new Stack<>();
         Stack<Character> op = new Stack<>();
@@ -21,7 +22,7 @@ public class prefix {
                     String v2 = val.pop();
                     String v1 = val.pop();
                     char o = op.pop();
-                    String t = o + v1 + v2;
+                    String t = v1 + v2 + o;
                     val.push(t);
                 }
                 op.pop();     // '(' isko remove kar diya
@@ -31,7 +32,7 @@ public class prefix {
                     String v2 = val.pop();
                     String v1 = val.pop();
                     char o = op.pop();
-                    String t = o + v1 + v2;
+                    String t = v1 + v2 + o;
                     val.push(t);
                     // push
                     op.push(ch);
@@ -42,7 +43,7 @@ public class prefix {
                         String v2 = val.pop();
                         String v1 = val.pop();
                         char o = op.pop();
-                        String t = o + v1 + v2;
+                        String t = v1 + v2 + o;
                         val.push(t);
                         // push
                         op.push(ch);
@@ -56,10 +57,10 @@ public class prefix {
             String v2 = val.pop();
             String v1 = val.pop();
             char o = op.pop();
-            String t = o + v1 + v2;
+            String t = v1 + v2 + o;
             val.push(t);
         }
-        String prefix = val.pop();
-        System.out.println("Prefix is : " + prefix);
+        String postfix = val.pop();
+        System.out.println("Postfix is : " + postfix);
     }
 }
