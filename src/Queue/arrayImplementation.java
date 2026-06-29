@@ -2,23 +2,23 @@ package Queue;
 
 public class arrayImplementation {
     public static class queueA{
-        int f = -1;
-        int r = -1;
+        int front = -1;
+        int rear = -1;
         int size = 0;
         int[] arr = new int[100];
 
         // add val in queue:-
         public void add(int val) {
-            if (r == arr.length - 1) {
+            if (rear == arr.length - 1) {
                 System.out.println("Queue is full");
                 return;
             }
-            if (f == -1){
-                f = r = 0;
+            if (front == -1){
+                front = rear = 0;
                 arr[0] = val;
             }
             else {
-                arr[++r] = val;
+                arr[++rear] = val;
             }
             size++;
         }
@@ -29,8 +29,8 @@ public class arrayImplementation {
                 System.out.println("Queue is empty");
                 return -1;
             }
-            int x = arr[f];
-            f++;
+            int x = arr[front];
+            front++;
             size--;
             return x;       // other way is "return arr[f-1];"    no need to calculate x;
         }
@@ -41,7 +41,7 @@ public class arrayImplementation {
                 System.out.println("Queue is empty");
                 return -1;
             }
-            return arr[f];
+            return arr[front];
         }
 
         // built empty function:-
@@ -56,7 +56,7 @@ public class arrayImplementation {
                 System.out.println("Queue is empty");
             }
             else {
-                for (int i = f; i <= r; i++) {
+                for (int i = front; i <= rear; i++) {
                     System.out.print(arr[i] + " ");
                 }
                 System.out.println();
