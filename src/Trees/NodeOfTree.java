@@ -34,12 +34,25 @@ public class NodeOfTree {
         b.left = d; b.right = e;
         c.right = f;
 
-        System.out.println(b.val);         //4
-        System.out.println(a.left.val);   // 4
+        Node g = new Node(10);
+        Node h = new Node(20);
+        c.left = g; e.right = h;
 
-        a.left.right.val = 96;  // e.val = 96
-        System.out.println(e.val);               // 96
-        System.out.println(a.left.right.val);    // 96
+        // a.left = null;  then left subtree will not print.
 
+        display(a);
+
+//        System.out.println(b.val);         //4
+//        System.out.println(a.left.val);   // 4
+//
+//        a.left.right.val = 96;  // e.val = 96
+//        System.out.println(e.val);               // 96
+//        System.out.println(a.left.right.val);    // 96
+    }
+    private static void display(Node root){
+        if(root == null) return;  // base case
+        System.out.print(root.val+" ");            // 1 4 2 6 20 3 10 5
+        display(root.left);   // left subtree
+        display(root.right);    // right subtree
     }
 }
