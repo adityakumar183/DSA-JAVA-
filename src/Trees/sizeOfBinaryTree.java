@@ -5,6 +5,13 @@ public class sizeOfBinaryTree {
         if (root == null) return 0;
         return 1 + size(root.left) + size(root.right);
     }
+
+    public static int levels(Node root) {
+        if (root == null) return 0;
+        int level = 1 + Math.max(levels(root.left), levels(root.right));
+        return level;
+    }
+
     public static void main(String[] args) {
         Node a = new Node(1);   //  a is the root
         Node b = new Node(4);
@@ -25,5 +32,8 @@ public class sizeOfBinaryTree {
         e.right = h;
 
         System.out.println("Size of Binary tree is = " + size(a));
+        int level = levels(a);
+        System.out.println("Levels of Binary tree is = " + level);
+        System.out.println("Height of Binary tree is = "+ (level-1));
     }
 }
