@@ -6,6 +6,12 @@ public class sumOfTreeNode {
         int sum = root.val + treeSum(root.left) + treeSum(root.right);
         return sum;
     }
+
+    public static int product(Node root){
+        if (root == null) return 1;
+        int x = root.val * product(root.left) * product(root.right);
+        return x;
+    }
     public static void main(String[] args) {
         Node a = new Node(1);   //  a is the root
         Node b = new Node(4);
@@ -26,5 +32,6 @@ public class sumOfTreeNode {
         e.right = h;
 
         System.out.println("Sum of Tree Node : " + treeSum(a));
+        System.out.println("Product of Tree Node : " + product(a));
     }
 }
